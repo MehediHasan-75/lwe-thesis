@@ -71,7 +71,7 @@ This system is specifically optimized for:
 
 ```bash
 # 1. Clone the repository
-git clone <repository-url>
+git clone https://github.com/yourusername/lwe-thesis.git
 cd lwe-thesis
 
 # 2. Create virtual environment
@@ -82,7 +82,7 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 # 4. Run the complete pipeline
-python process-clean-numbers.py
+python main.py
 ```
 
 **Output:** 5 visualization plots + CSV report in `outputs/`
@@ -150,8 +150,8 @@ lwe-thesis/
 │   └── compression_report.csv      # Results table
 ├── config/                         # Configuration files
 ├── benchmarks/                     # Performance testing
-├── requirements.txt                # Dependencies
-└── process-clean-numbers.py        # Main pipeline (run this)
+├── requirements.txt                # 
+└── main.py        # Main pipeline (run this)
 ```
 
 ---
@@ -516,22 +516,12 @@ With this system:
 
 ## Installation & Setup
 
-### System Requirements
-
-```
-- OS: Linux, macOS, or Windows
-- Python: 3.10+ (tested with 3.12)
-- RAM: 2+ GB
-- Disk: 1+ GB for images and outputs
-- Internet: For git clone
-```
-
 ### Full Installation Guide
 
 #### Step 1: Clone Repository
 
 ```bash
-git clone https://github.com/MehediHasan-75/lwe-thesis.git
+git clone https://github.com/yourusername/lwe-thesis.git
 cd lwe-thesis
 ```
 
@@ -617,7 +607,7 @@ for i, name in enumerate(['gradient', 'checkerboard', 'random']):
 
 **Command:**
 ```bash
-python process-clean-numbers.py
+python main.py
 ```
 
 **What it does:**
@@ -794,27 +784,6 @@ For each value in sequence:
 
 **Efficiency:** 10-40% additional compression (entropy encoding)
 
----
-
-### Memory & Performance
-
-```
-Image Size:      100×100 = 10,000 pixels
-Original:        80,000 bits (10 KB)
-After Delta:     ~40,000 bits (entropy reduced)
-After RLE:       ~15,000 bits (repetition removed)
-After Huffman:   ~12,000 bits (optimal encoding)
-Compression:     85% (excellent for B&W)
-
-Processing Time:
-- Load:          <10ms
-- Compress:      <50ms
-- Decompress:    <50ms
-- Validate:      <10ms
-Total:           ~120ms per image
-```
-
----
 
 ## Future Work
 
@@ -888,11 +857,12 @@ If you use this project in your thesis, please cite:
 
 ```
 @thesis{lwe_image_compression_2025,
-    author = {Your Name},
+    author1 = {MD. MEHEDI HASAN},
+    authon2 = {Nasir Udding}
     title = {LWE Cryptography Optimization with Image Compression},
     school = {Shahjalal University of Science and Technology},
     year = {2025},
-    type = {Master's Thesis}
+    type = {BSC final year thesis}
 }
 ```
 
@@ -902,11 +872,11 @@ If you use this project in your thesis, please cite:
 
 **For questions or issues:**
 - Create an issue on GitHub
-- Contact: your.email@example.com
-- Thesis Advisor: [Advisor Name]
+- Contact: mehedi.hasan49535@gmail.com
+- Thesis Advisor: A.K.M. Fakhrul Hossain, Lecturer, Shahjalal University of Science and Technology.
 
 ---
 
 **Document Version:** 1.0  
 **Last Updated:** November 5, 2025  
-**Status:** Ready for Thesis Submission
+**Status:** Ready for Predefence
