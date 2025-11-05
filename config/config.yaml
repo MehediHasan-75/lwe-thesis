@@ -1,0 +1,45 @@
+# LWE Cryptography Thesis Configuration
+
+# Image Compression Settings
+compression:
+  delta_dpcm:
+    enabled: true
+    clamp_range: [-128, 127]
+  rle:
+    enabled: true
+    max_run: 255
+  huffman:
+    enabled: true
+
+# Cryptography Settings
+cryptography:
+  lwe:
+    n: 256           # Polynomial degree
+    q: 65536         # Modulus (2^16)
+    sigma: 1.0       # Error distribution std dev
+  
+  ntt:
+    polynomial_sizes: [128, 256, 512]
+  
+  strassen:
+    matrix_sizes: [64, 128, 256]
+    threshold: 32
+
+# Benchmarking
+benchmarks:
+  compression:
+    batch_size: null  # Process all images
+    repeat_count: 1
+  
+  ntt:
+    repeat_count: 10
+  
+  strassen:
+    repeat_count: 5
+
+# Output Settings
+output:
+  plots_dir: outputs/plots
+  reports_dir: outputs/reports
+  reconstructed_images_dir: outputs/reconstructed_images
+  plot_dpi: 300

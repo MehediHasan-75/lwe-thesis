@@ -1,0 +1,23 @@
+# Benchmark Parameters
+# These are default parameters for benchmarking
+
+image_compression:
+  test_sizes: [256, 512, 1024, 2048]  # Image sizes to test
+  compression_methods:
+    - delta_dpcm_rle_huffman
+    - delta_dpcm_huffman
+    - rle_huffman
+
+ntt_polynomial:
+  sizes: [128, 256, 512, 1024]
+  repeat: 10
+  
+strassen_matrix:
+  sizes: [64, 128, 256]
+  repeat: 5
+  threshold: 32
+
+lwe_encryption:
+  n_values: [256, 512]
+  q_values: [65536, 131072]
+  sigma: 1.0
