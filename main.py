@@ -66,7 +66,7 @@ def process_all_images():
             compressed = CompressionManager.compress_image_complete(
                 pixels, width, height, filename
             )
-            ratio = (compressed.compressed_bits / original_bits) * 100
+            ratio = ((original_bits - compressed.compressed_bits) / original_bits) * 100
             
             # Decompress
             reconstructed = DecompressionManager.decompress_image_complete(compressed)
